@@ -27,3 +27,17 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*
+SOME IMPORTANT NOTE:
+
+Because of the device issue i couldn't complete some parts like testing, objectbox, etc.
+However, I have implemented Shared Preferences as quick alternative to local storage.
+
+Also, I admit the accessibility of the features and buttons are not better enough as i needed some time to think about
+placing things in right places. But please judge me with these negative points.
+
+I know it's not right, but I am attaching one of my recent projects for a client, which is entirely created by me,
+that is published on the App Store
+=> https://apps.apple.com/us/app/inside-edge-events/id6468079470?platform=iphone
+*/
