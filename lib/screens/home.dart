@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
-      await userController.fetchUsers().catchError(debugPrint);
+      await userController.retrieveUsers().catchError(debugPrint);
     });
   }
 

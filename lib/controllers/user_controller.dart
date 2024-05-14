@@ -11,11 +11,10 @@ final UserController userController = Get.put(UserController());
 
 class UserController extends GetxController {
   var usersList = [].obs;
-  var editMode = false.obs;
 
   retrieveUsers() async {
     try{
-      var data = await preferences.getString("USER_DATA");
+      var data = preferences.getString("USER_DATA");
 
       if(data != null) {
         List<User> users = List<User>.from(json.decode(data).map((e) => User.fromJson(e)).toList());
@@ -40,10 +39,6 @@ class UserController extends GetxController {
     for(User u in users) {
       usersList.removeWhere((element) => element.name.first.toLowerCase() == u.name.first.toLowerCase());
     }
-  }
-
-  void setEditMode() {
-    userController.editMode.value = !userController.editMode.value;
   }
 
   clearUsers() {
